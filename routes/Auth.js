@@ -3,11 +3,15 @@ const router = express.Router();
 const User = require("../models/User");
 // express validator is  used to validate user input in the signup form
 const { body, validationResult } = require("express-validator");
+
 // importing bcrypt js for hashing passwords, adding salts and pepper
 const bcrypt = require("bcrypt");
 
 // A middleware function that checks if a user is authentic, a secure connection between client and server to authenticate a session.
-const jwt = require("jsonwebtoken");
+
+var jwt = require('jsonwebtoken');
+
+
 const fetchuser = require("../middleware/fetchuser");
 
 const JWT_SECRET = `NKXEVzywAluVCh2QyynpFbH3eFKyN6kFfe0wXW2Q`;
