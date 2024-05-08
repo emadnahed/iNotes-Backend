@@ -1,8 +1,7 @@
-const { type } = require("@testing-library/user-event/dist/type");
 const mongoose = require("mongoose");
 const { Schema } = mongoose
 
-const userSchema = new mongoose.Schema({
+const UserSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -22,6 +21,5 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-const User = mongoose.model('user', userSchema);
-User.createIndexes()
+const User = mongoose.model('user', UserSchema);
 module.exports = User;
