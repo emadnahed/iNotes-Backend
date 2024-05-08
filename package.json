@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "pm2 start process.json --env production"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +22,10 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
-  }
+  
+}
+
+
+
+
 }
